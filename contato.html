@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+<html lang="pt-br">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      * {
+          box-sizing: border-box;
+      }
+
+      ul{
+        list-style: none;
+        
+      }
+
+footer {
+padding-top: 30px;
+background-color: #292c2f;
+color: #bbb;
+}
+
+footer a {
+color: #999;
+text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+color: #aaa;
+text-decoration:none;
+border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  color: #d1d2d2;
+  padding: 0.7em 1em;
+}
+
+      li{
+        padding-bottom: 10px;
+      }
+
+      .espacamento{
+          padding-left: 20px;
+      }
+
+      .icon{
+          padding-bottom: 5px;
+          float: left;
+          width: 200px;
+      }
+
+
+
+      .centro{
+          text-align: center;
+          position: left;
+          
+      }
+      
+      .flow{
+          overflow: hidden;
+      }
+      .alinhar{
+          text-align: center;
+          float: left;
+
+      }
+
+      .menu {
+          float: left;
+          width: 20%;
+      }
+
+      .menuitem {
+          font-size:30px;
+          text-align: center;
+      }
+
+      .main {
+          float: left;
+          text-align: center;
+          width: 60%;
+          padding: 0 20px;
+          overflow: hidden;
+      }
+
+      .right {
+          background-color: lightblue;
+          float: left;
+          width: 20%;
+          padding: 10px 15px;
+          margin-top: 7px;
+      }
+
+      @media only screen and (max-width:800px) {
+
+          /* For tablets: */
+          .main {
+              width: 80%;
+              padding: 0;
+          }
+
+          .right {
+              width: 100%;
+          }
+      }
+
+      @media only screen and (max-width:500px) {
+
+          .menu,
+          /* Para exibição de dispositivos com resolução máxima de 500 pixels */
+          .main,
+          .right {
+              width: 100%;
+          }
+      }
+
+      .image-text {
+          float: left;
+          border: transparent thin solid;
+          max-width: 186px;
+              }
+
+  </style>
+</head>
+
+<header style="font-family:Baskerville;" style= "background-color:#CC0A2F;padding:15px;">
+    
+  <!-- Cabeçalho-->
+  <div style="background-color:#CC0A2F;padding:15px;">
+    <div style="display: flex;align-items: center;">
+      <div class="col-md-4"><a href="index.html">
+      <img  style="padding:20;" src="img/download.png"></a>
+  </div>
+
+      <div class="col-md-6" style="display: flex; align-items: center; gap: 30px;">
+          <div class="menuitem"><a href="sobre.html" style="color: white">Sobre</a></div>
+          <div class="menuitem"><a href="suporte.html" style="color: white">Suporte</a></div>
+          <div class="menuitem"><a href="servicos.html" style="color: white">Serviços</a></div>
+          <div class="menuitem"><a href="precos.html" style="color: white">Preços</a></div>
+          <div class="menuitem"><a href="contato.html" style="color: white">Contato</a></div>
+      </div>
+          <div class="col-md-2" style="padding: 30px;">
+              <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background-color:#CC0A2F;border-color:#CC0A2F;"><img src="img/icon.png" width="150" height="80"> 
+                  </button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-SM">
+                      <div class="modal-content">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-body" style="background-color: #c62643;">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <div class="container">
+                  <h2 class="col-sm-offset-2 col-sm-10"><img src="img/icon.png" width="150" height="80" ></h2>
+                  <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                      <label class="control-label col-sm-1" for="email">Email:</label>
+                      <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-1" for="pwd">Senha:</label>
+                      <div class="col-sm-4">          
+                        <input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="pwd">
+                      </div>
+                    </div>
+                    <div class="form-group">        
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                          <label><input type="checkbox" name="remember">Lembre-se de mim</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">        
+                      <div class="col-sm-offset-2 col-sm-7">
+                        <button type="button" class="href" style="color: #292c2f;"><a href="index.html">Login</a></button>
+                        <button type="button" class="button" style="color: #292c2f;"><a href="index.html">Cadastrar</a></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+      </div>  
+  </div>  
+</header>
+<body style="background-color:#c62643; font-family: 'Arial';overflow-x: hidden;">
+  <div style=" font-size:12px; font-family: 'Arial' ;" class="container">
+    <div><img src="img/banner4.png" width="1140px"></div>
+    <form style="text-align: left;padding-top: 30px; background: url('img/fundo4.png');background-repeat: no-repeat;background-size: 100%;">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label >Nome</label>
+          <input type="text" class="form-control" id="name" placeholder="Nome" name="Nome">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Sobrenome</label>
+          <input type="password" class="form-control" id="Sobrenome" placeholder="Sobrenome" name="Sobrenome">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Idade</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Idade" name="Idade">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Filiação</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Nome do Pai">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Filiação</label>
+          <input type="password" class="form-control" id="Sobrenome" placeholder="Nome da Mãe">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Endereço</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Endereço">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">N°</label>
+          <input type="password" class="form-control" id="Sobrenome" placeholder="N°">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputEmail4">Complemento</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Complemento">
+          </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Cidade</label>
+          <input type="text" class="form-control" id="Cidade" placeholder="Cidade">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputState">Estado</label>
+          <select id="inputState" class="form-control">
+            <option selected>Escolha...</option>
+            <option>AC</option>
+            <option>AL</option>
+            <option>AP</option>
+            <option>AM</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MT</option>
+            <option>MS</option>
+            <option>MG</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PR</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RS</option>
+            <option>RO</option>
+            <option>SC</option>
+            <option>SP</option>
+            <option>SE</option>
+            <option>TO</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check" style="text-align: center;">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck" style="padding-bottom: 58px;">
+            Você concorda com todos as respostas acima?  
+          </label>
+        </div>
+      </div>
+      </div>
+      <a href="index.html" class="btn btn-sm" role="button" style="background-color:#a30044;color: #d1d2d2;font-size: 15px;position: absolute; left: 700px; top: 1000px;">Confirmar</a>                
+    </form>
+  </div>  
+</body>    
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-5">
+              <h5><img src="img/iconbradesco.png" height="50px"><a href="index.html">Bradesco</a></h5>
+              <div class="row">
+                  <div class="col-md-3">
+                      <ul>
+                          <li><a href="https://banco.bradesco/html/classic/produtos-servicos/capitalizacao/index.shtm#produtos-servicos">Product</a></li>
+                          <li><a href="https://banco.bradesco/html/classic/promocoes/index.shtm">Benefícios</a></li>
+                          <li><a href="https://banco.bradesco/html/classic/index.shtm">Parceiros</a></li>
+                          <li><a href="sobre.html">Sobre</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-9">
+                      <ul>
+                          <li><a href="https://github.com/niloestudar">Documentação</a></li>
+                          <li><a href="suporte.html">Suporte</a></li>
+                          <li><a href="https://www.bradescoseguranca.com.br/html/seguranca_corporativa/pf/seguranca-informacao/privacidade.shtm?referer=https://www.google.com/">Direitos de Privacidade</a></li>
+                          <li><a href="suporte.html">Nosso time</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <ul class="nav" >
+                  <li style="float: left;"><a href="https://www.linkedin.com/company/bradesco?original_referer=" ><img src="img/iconlinkedin.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.facebook.com/bradesco" ><img src="img/iconface.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://twitter.com/bradesco" ><img src="img/icontwitter.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.youtube.com/bradesco" ><img src="img/iconyoutube.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.instagram.com/bradesco/" ><img src="img/iconinsta.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.tiktok.com/amp/tag/bradesco?lang=pt_BR" ><img src="img/icontiktok.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+              </ul>
+              <br>
+          </div>
+          <div class="col-md-2">
+              <h5 class="text-md-right">Fale Conosco</h5>
+              <hr>
+          </div>
+          <div class="col-md-5">
+              <form>
+                  <fieldset class="form-group">
+                      <input type="email" class="form-control" id="email" placeholder="Enter email">
+                  </fieldset>
+                  <fieldset class="form-group">
+                      <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                  </fieldset>
+                  <fieldset class="form-group text-xs-right">
+                    <a href="#"><button type="button" class="btn btn-secondary-outline btn-sm"style="color: #292c2f;">Enviar</button></a>
+                  </fieldset>
+              </form>
+          </div>
+      </div>
+  </div>
+  <HR width="73%" size="10" color="#bbb">
+<div style="background-color: #292c2f; color: #bbb;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <span
+  id="data"></span>
+
+<!-- Exibe a data atual-->
+<script language=javascript type="text/javascript">
+  now = new Date
+  var mes = now.getMonth();
+  switch (mes) {// Array sempre inicia com 0
+      case 9: mes = "Outubro";
+          break;
+      case 10: mes = "Novembro";
+          break;
+      case 11: mes = "Dezembro";
+          break;
+          
+  }
+// faz a saída com os parâmetros da data diretamente na linha que o scripr é executado
+  document.write("Hoje é " + now.getDate() + " de " + mes + " de " + now.getFullYear())
+  
+</script> - Criado por Nilo <a href="https://github.com/niloestudar/" style="color: rgba(234, 251, 119, 0.629);" target="_blank">Git Hub</a>
+</div>
+</footer>

@@ -1,0 +1,109 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+
+
+
+.tabela-preco /*alinhando os preços*/
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: min(1600px, 100%);
+	margin:  auto;
+}
+
+.card-preco
+{
+	flex:1;
+	max-width: 360px;
+	background-color: #fff;
+	margin: 20px 10px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	color: #2d2d2d;
+	transition: .3s linear;
+}
+
+.card-preco:hover  /*fundo da caixa*/
+{
+	background-color: #ab54e2;
+	border-radius: 8px;
+
+}
+
+
+.card-preco-header /*cor em cima do card*/
+{
+	background-color: #ee0868;
+	display: inline-block;
+	color: #fff;
+	padding: 12px 30px;
+	border-radius: 0 0 20px 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: .4s line;
+}
+
+.preco  /*cor do texto e aumento das letras*/
+{
+	font-size: 70px;
+	color: #2d2d2d;
+	margin: 40px 0;
+	transition: .2s linear;
+}
+
+
+.preco sup, .preco span /*tamanho do preço*/
+{
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.card-preco:hover, .card-preco:hover .preco  /*cor das letras dos cards*/
+{
+	color: #fff;
+}
+
+.card-preco li /*espaçamento das letras*/
+{
+	font-size: 16px;
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+
+.btn  /*entorno do botao*/
+{
+	display: inline-block;
+	border: 2px solid #c62643;
+	color: #2d2d2d;
+	padding: 18px 40px;
+	border-radius:  8px;
+	text-transform:  uppercase;
+	font-weight: 500;
+	transition:  .3s linear;
+}
+
+.btn:hover /*cor ddo botao*/
+{
+	background-color: #a30044;
+	color: #fff; 
+}
+
+
+@media screen and (max-width: 1100px) /*tamanho do card*/
+{
+	.card-preco
+	{
+		flex: 50%;
+	}
+}

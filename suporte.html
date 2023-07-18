@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+      ul{
+        list-style: none;
+        
+      }
+
+        body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+
+        .espacamento{
+            padding-left: 20px;
+        }
+
+        .icon{
+            padding-bottom: 5px;
+            float: left;
+            width: 200px;
+        }
+
+
+
+        .centro{
+            text-align: center;
+            position: left;
+            
+        }
+        
+        .flow{
+            overflow: hidden;
+        }
+        .alinhar{
+            text-align: center;
+            float: left;
+
+        }
+
+        .menu {
+            float: left;
+            width: 20%;
+        }
+
+        .menuitem {
+            font-size:30px;
+            text-align: center;
+        }
+
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        .right {
+            background-color: lightblue;
+            float: left;
+            width: 20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+
+        @media only screen and (max-width:800px) {
+
+            /* For tablets: */
+            .main {
+                width: 80%;
+                padding: 0;
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+
+            .menu,
+            /* Para exibição de dispositivos com resolução máxima de 500 pixels */
+            .main,
+            .right {
+                width: 100%;
+            }
+        }
+
+        .image-text {
+            float: left;
+            border: transparent thin solid;
+            padding: 5px;
+            margin: 0px 10px 10px 0;
+            max-width: 186px;
+        }
+    </style>
+</head>
+
+  <header style="font-family:Baskerville;" style= "background-color:#CC0A2F;padding:15px;">
+    
+    <!-- Cabeçalho-->
+    <div style="background-color:#CC0A2F;padding:15px;">
+      <div style="display: flex;align-items: center;">
+        <div class="col-md-4"><a href="index.html">
+        <img  style="padding:20;" src="img/download.png"></a>
+    </div>
+    <div class="col-md-6" style="display: flex; align-items: center; gap: 30px;">
+            <div class="menuitem"><a href="sobre.html" style="color: white">Sobre</a></div>
+            <div class="menuitem"><a href="suporte.html" style="color: white">Suporte</a></div>
+            <div class="menuitem"><a href="servicos.html" style="color: white">Serviços</a></div>
+            <div class="menuitem"><a href="precos.html" style="color: white">Preços</a></div>
+            <div class="menuitem"><a href="contato.html" style="color: white">Contato</a></div>
+        </div>
+            <div class="col-md-2" style="padding: 30px;">
+                <div class="container">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background-color:#CC0A2F;border-color:#CC0A2F;"><img src="img/icon.png" width="150" height="80"> 
+                    </button>
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog modal-SM">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <div class="modal-body" style="background-color: #c62643;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="container">
+                    <h2 class="col-sm-offset-2 col-sm-10"><img src="img/icon.png" width="150" height="80" ></h2>
+                    <form class="form-horizontal" action="/action_page.php">
+                      <div class="form-group">
+                        <label class="control-label col-sm-1" for="email">Email:</label>
+                        <div class="col-sm-4">
+                          <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-sm-1" for="pwd">Senha:</label>
+                        <div class="col-sm-4">          
+                          <input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="pwd">
+                        </div>
+                      </div>
+                      <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="remember">Lembre-se de mim</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-7">
+                          <button type="button" class="href" style="color: #292c2f;"><a href="index.html">Login</a></button>
+                          <button type="button" class="button" style="color: #292c2f;"><a href="index.html">Cadastrar</a></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+        </div>  
+    </div>  
+</header>
+<body style="background-color:#c62643; font-family: 'Arial';overflow-x: hidden;">
+  <div style="background-color:white;text-align:center;font-size:12px; font-family: 'Arial';padding: 0px;" class="container">
+    <div style="position:relative;padding: 0;"><img src="img/fundo3.jpeg" width="100%" height="500px">
+      <img src="img/suporte.png" style="position: absolute; left: 220px; top: 30px;">
+  </div>
+  <div>
+    <h2 style="color: #c62643;text-align: center; padding-top: 20px; padding-bottom: 20px;">Como falar com a BIA e como ela pode te ajudar</h2>
+    <p style="font-size: 18px;padding-left:40px;color: #535353;padding-bottom: 50px;font-style: normal !important;text-align:left;">A <strond>BIA</strond> é nossa inteligência artificial, criada pra te ajudar com assuntos financeiros.<br><br> Ela está preparada pra tirar suas dúvidas, fazer transações, consultar saldo e outros dados da sua conta, encontrar a agência <br> mais próxima e muito mais!
+    </p>
+    <h2 style="padding-left:40px;color: #c62643;padding-bottom: 20px;font-style: normal !important;text-align:left;font-size: 23px;">Pelo App Bradesco, você pode falar com a BIA, por voz ou texto, de 2 formas:</h2>
+    <li style="padding-left:40px;font-size: 17px;text-align: left;">
+      Antes de acessar a conta</li>
+      <p style="padding-left:40px;text-align: left;font-size: 13px">É só tocar na opção BIA e tirar suas dúvidas com ela.</p>
+    
+    <li style="padding-left:40px;font-size: 17px;text-align: left; padding-bottom: 10px;">
+      Depois de acessar a conta</li> 
+      <p style="padding-left:40px;text-align: left;font-size: 13px">No menu inicial, toque na opção fale com a BIA. Ela te ajuda a pagar contas, consultar saldos, limites e últimos lançamentos e ainda faz transferências entre <br> Contas Bradesco pra você.</p> 
+      <p style="padding: top 20px;padding-left:40px;text-align: left;font-size: 13px"><strong> Tem um vídeo aqui para te ajudar :)</strong></p> 
+    <div>
+      <iframe width="707" height="435" src="https://www.youtube.com/embed/LIpUuMrT1xo" title="Bradesco Explica - BIA te ajuda a fazer transações no App" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h3 style="color: #535353;text-align: left; padding-top: 20px; padding-left: 40px;padding-bottom: 30px;">Pelo WhatsApp</h3>
+    <p style="padding-left:150px;font-size: 17px;text-align: left; padding-bottom: 10px;">Você pode falar com a BIA pelo WhatsApp. Basta adicionar o número 11 3335 0237* aos seus contatos.</p>
+    <div style="position: relative;height: 200px;">
+      <a href="https://api.whatsapp.com/send/?phone=551133350237&text&type=phone_number&app_absent=0" class="btn btn-sm" role="button" style="background-color:#a30044;color: #d1d2d2;font-size: 15px;position: absolute; left: 150px; top: 50px;">Falar com Bia</a>                
+      <img src="img/qrcode.png" style="position: absolute; left: 350px; top: 20px;">
+
+    </div>  
+  
+  </div>
+
+    <div id="team-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                  <h2 style="color: #c62643;text-align: center;text-transform:uppercase;border-bottom: 1px solid#a30044; width: 30%;">Conheça Nosso time</h2>
+                  <p style="color: #c62643;padding-bottom: 5px;font-style: normal !important;font-size: 23px;
+                  margin-bottom: 20px !important;text-align:center;">Nossa equipe de profissionais auxiliará vocês a todo momento</p>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <img src="img/image1.jfif" class="card-img-top" alt="Imagem de Perfil 1" width="250px" height="400px">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: #a30044;">Gabriel</h5>
+                    <p class="card-text" style="color: #a30044;">Aspirante a professor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <img src="img/image2.jfif" class="card-img-top" alt="Imagem de Perfil 2" width="250px" height="400px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="color: #a30044;">Nilo(O rio)</h5>
+                    <p class="card-text" style="color: #a30044;">Inimigo do café</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <img src="img/image0.jpeg" class="card-img-top" alt="Imagem de Perfil 3" width="250px" height="400px">
+                  <div class="card-body">
+                    <h5 class="card-title"style="color: #a30044;">Alexandre(Chinês)</h5>
+                    <p class="card-text" style="color: #a30044;">Inimigo do código</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4" width="250px" height="400px">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: #a30044;">Kauã🥑</h5>
+                    <p class="card-text" style="color: #a30044;">Aspirante a Hacker</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+    </div>
+  </div>
+</body> 
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-5">
+              <h5><img src="img/iconbradesco.png" height="50px"><a href="index.html">Bradesco</a></h5>
+              <div class="row">
+                  <div class="col-md-3">
+                      <ul>
+                          <li><a href="https://banco.bradesco/html/classic/produtos-servicos/capitalizacao/index.shtm#produtos-servicos">Product</a></li>
+                          <li><a href="https://banco.bradesco/html/classic/promocoes/index.shtm">Benefícios</a></li>
+                          <li><a href="https://banco.bradesco/html/classic/index.shtm">Parceiros</a></li>
+                          <li><a href="sobre.html">Sobre</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-9">
+                      <ul>
+                          <li><a href="https://github.com/niloestudar">Documentação</a></li>
+                          <li><a href="suporte.html">Suporte</a></li>
+                          <li><a href="https://www.bradescoseguranca.com.br/html/seguranca_corporativa/pf/seguranca-informacao/privacidade.shtm?referer=https://www.google.com/">Direitos de Privacidade</a></li>
+                          <li><a href="suporte.html">Nosso time</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <ul class="nav" >
+                  <li style="float: left;"><a href="https://www.linkedin.com/company/bradesco?original_referer=" ><img src="img/iconlinkedin.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.facebook.com/bradesco" ><img src="img/iconface.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://twitter.com/bradesco" ><img src="img/icontwitter.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.youtube.com/bradesco" ><img src="img/iconyoutube.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.instagram.com/bradesco/" ><img src="img/iconinsta.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+                  <li style="float: left;"><a href="https://www.tiktok.com/amp/tag/bradesco?lang=pt_BR" ><img src="img/icontiktok.png" style="background-color: #292c2f; height: 40px;"></i></a></li>
+              </ul>
+              <br>
+          </div>
+          <div class="col-md-2">
+              <h5 class="text-md-right">Fale Conosco</h5>
+              <hr>
+          </div>
+          <div class="col-md-5">
+              <form>
+                  <fieldset class="form-group">
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  </fieldset>
+                  <fieldset class="form-group">
+                      <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                  </fieldset>
+                  <fieldset class="form-group text-xs-right">
+                    <a href="#"><button type="button" class="btn btn-secondary-outline btn-sm"style="color: #292c2f;">Enviar</button></a>
+                  </fieldset>
+              </form>
+          </div>
+      </div>
+  </div>
+  <HR width="73%" size="10" color="#bbb">
+<div style="background-color: #292c2f; color: #bbb;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <span
+  id="data"></span>
+
+<!-- Exibe a data atual-->
+<script language=javascript type="text/javascript">
+  now = new Date
+  var mes = now.getMonth();
+  switch (mes) {// Array sempre inicia com 0
+      case 9: mes = "Outubro";
+          break;
+      case 10: mes = "Novembro";
+          break;
+      case 11: mes = "Dezembro";
+          break;
+          
+  }
+// faz a saída com os parâmetros da data diretamente na linha que o scripr é executado
+  document.write("Hoje é " + now.getDate() + " de " + mes + " de " + now.getFullYear())
+  
+</script> - Criado por Nilo <a href="https://github.com/niloestudar/" style="color: rgba(234, 251, 119, 0.629);" target="_blank">Git Hub</a>
+</div>
+</footer>
