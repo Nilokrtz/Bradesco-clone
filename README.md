@@ -4,7 +4,7 @@ Allow me to present my debut project, which I skillfully developed during my ten
 
 As with any first coding project, I humbly acknowledge that the code may not boast the utmost refinement. Nonetheless, it serves as a testament to my unwavering commitment to personal growth and professional development. Embracing this opportunity to record my progress.
 
-<h3>🛠️Tools using</h3>
+<h3>🛠️Used Tools</h3>
 
 <div>
   <img height="50" width="40" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
