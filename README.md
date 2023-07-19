@@ -1,8 +1,8 @@
 # Bradesco-clone
 
-This was my first project developed by me for a work of I.T technician from Senac Rj<br>
-In this work I made a clone site of Bradesco. That was my first conding project,so probably the code not is so clean<br>
-but I think is good recorder my progress here.
+Allow me to present my debut project, which I skillfully developed during my tenure as an esteemed IT technician at Senac RJ. The culmination of this endeavor is a meticulously crafted cloned website of Bradesco, signifying a remarkable achievement in my early journey into the world of coding.
+
+As with any first coding project, I humbly acknowledge that the code may not boast the utmost refinement. Nonetheless, it serves as a testament to my unwavering commitment to personal growth and professional development. Embracing this opportunity to record my progress.
 
 <h3>🛠️Tools using</h3>
 
