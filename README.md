@@ -4,6 +4,10 @@ Allow me to present my debut project, which I skillfully developed during my ten
 
 As with any first coding project, I humbly acknowledge that the code may not boast the utmost refinement. Nonetheless, it serves as a testament to my unwavering commitment to personal growth and professional development. Embracing this opportunity to record my progress.
 
+# Getting Started
+
+Open index.html in a editor text and run the code.
+
 <h3>🛠️Used Tools</h3>
 
 <div>
